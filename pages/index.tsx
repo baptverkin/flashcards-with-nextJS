@@ -46,7 +46,7 @@ const Home: NextPage = () => {
           </a>
 
           <a
-            href="/flashcards/salad"
+            href="/flashcards/salade"
             className={styles.card}
           >
             <h2>Salade &rarr;</h2>

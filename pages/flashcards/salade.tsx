@@ -15,9 +15,7 @@ type Questions = {
   answer3: string;
 }
 
-
-
-export const Salade: React.FC = ({questions, questionType}) => {
+const Salade: React.FC = () => {
   const [questionTypes, setQuestionTypes] = React.useState("")
   const [question, setQuestion] = React.useState("My first question")
   const [answer, setAnswer] = React.useState("Answer to my first question")
@@ -36,6 +34,7 @@ export const Salade: React.FC = ({questions, questionType}) => {
     const generateRandom: number = Math.round(Math.random()*(questions.length-1));
     setQuestionType(questions[generateRandom].type)
     console.log("test3", questionType);
+  }
 
     console.log("test===", questionType)
 
@@ -46,15 +45,15 @@ export const Salade: React.FC = ({questions, questionType}) => {
       (() => {
         if(questionType === gameTypes[0] ){
         return (
-          <MentalCard questions={questions}/>
+          <MentalCard />
         )
       } else if (questionType === gameTypes[1]){
         return (
-          <InputCard questions={questions}/>
+          <InputCard />
           )
       }else {
         return (
-          <MultipleChoice questions={questions}/>
+          <MultipleChoice />
           )
       }
       })
@@ -62,15 +61,15 @@ export const Salade: React.FC = ({questions, questionType}) => {
       (() => {
         if(questionTypes === gameTypes[0] ){
         return (
-        <MentalCard questions={questions}/>
+        <MentalCard />
         )
       } else if (questionTypes === gameTypes[1]){
         return (
-          <InputCard questions={questions}/>
+          <InputCard />
           )
       }else {
         return (
-          <MultipleChoice questions={questions}/>
+          <MultipleChoice />
           )
       }
       })
@@ -79,3 +78,5 @@ export const Salade: React.FC = ({questions, questionType}) => {
     </>
   )
 }
+
+export default Salade;
