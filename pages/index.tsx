@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { Layout } from '../components/layout'
 import styles from '../styles/Home.module.css'
 import flashcardTypes from "../components/layout"
+import Link from "next/link"
+
 
 
 const Home: NextPage = () => {
@@ -27,33 +29,35 @@ const Home: NextPage = () => {
 
 
         <div className={styles.grid}>
-          <a href="/flashcards/mental-cards" className={styles.card}>
-            <h2>Mental Cards &rarr;</h2>
-            <p>The most simple one, click on the question to get the answer</p>
-          </a>
+          <Link href="/flashcards/mental-cards" >
+            <a className={styles.card}>
+              <h2>Mental Cards &rarr;</h2>
+              <p>The most simple one, click on the question to get the answer</p>
+            </a>
+          </Link>
 
-          <a href="/flashcards/input" className={styles.card}>
-            <h2>Input cards &rarr;</h2>
-            <p>Enter the right answer in the designated field and check if you are a genius</p>
-          </a>
+          <Link href="/flashcards/input">
+            <a className={styles.card}>
+              <h2>Input cards &rarr;</h2>
+              <p>Enter the right answer in the designated field and check if you are a genius</p>
+            </a>
+          </Link>
 
-          <a
-            href="/flashcards/multiple-choice"
-            className={styles.card}
-          >
-            <h2>Multiple-choice cards &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href="/flashcards/multiple-choice">
+            <a className={styles.card}>
+              <h2>Multiple-choice cards &rarr;</h2>
+              <p>Discover and deploy boilerplate example Next.js projects.</p>
+            </a>
+          </Link>
 
-          <a
-            href="/flashcards/salade"
-            className={styles.card}
-          >
+          <Link href="/flashcards/salade">
+            <a className={styles.card}>
             <h2>Salade &rarr;</h2>
             <p>
               Still hesitating on the game to pick ? The salad is a random mix of all of them !
             </p>
           </a>
+        </Link>
         </div>
       </main>
     </div>

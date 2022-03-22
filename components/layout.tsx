@@ -30,7 +30,7 @@ export const Layout: React.FC = ({children}) => {
           {flashcardTypes.map((flashcard, index) => {
             return (
             <li key={index} value={flashcard}>
-                <a href="/blog/articles" className="nav-link px-2 text-white" >
+                <a href="/flashcards/${flashcard}" className="nav-link px-2 text-white" >
                   {flashcard}
                 </a>
             </li>
